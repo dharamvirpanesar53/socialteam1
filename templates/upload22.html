@@ -1,0 +1,17 @@
+{% load static %}
+{% static "images" as baseURL %}
+<html>
+<body>
+<form method="post"  action="post_success" enctype="multipart/form-data">
+         {% csrf_token %}
+  <label for="fname">First name:</label><br>
+  <input type="text"  name="title" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text"  name="des" value=""><br>
+  
+  <input type="file"  name="img" value=""><br><br>
+  <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>

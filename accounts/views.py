@@ -62,4 +62,4 @@ def post_success(request):
     camp2 = campaign(title=title, des=des, img=img)
 
     camp2.save()
-    return render(request, "upload.html" )
+    return redirect('/')

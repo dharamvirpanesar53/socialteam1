@@ -7,12 +7,12 @@
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Social Awareness</title>
+	
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
 	<script type="text/javascript" src="{% static 'js/mobile.js' %}"></script>
 </head>
-<body>
+
 	<div id="header">
 		<a href="/" class="logo">
 			<img src="{% static 'images/logo.png' %}" alt="">
@@ -22,16 +22,18 @@
 				<a href="/">home</a>
 			</li>
 			<li>
-				<a href="#">about</a>
+				<a href="about.html">about</a>
 			</li>
 			{% if user.is_authenticated %}
 			<li><b>Hello, {{user.first_name}}</b></li>
-			
+			<li>
+				<a href="accounts/logout">Edit Profile</a>
+			</li>
 			<li>
 				<a href="accounts/upload">Post Campaingns</a>
 			</li>
 			<li>
-				<a href="#">Promote Business</a>
+				<a href="accounts/logout">Promote Business</a>
 			</li>
 			<li>
 				<a href="accounts/logout">Logout</a>
@@ -46,47 +48,4 @@
 			{% endif %}
 		</ul>
 	</div>
-	<div id="body">
-		<h1><span>Campaigns</span></h1>
-		<div>
-			<ul>
-				{% for camp in camps %}
-				{% if camp.approved %}
-				<li>
-					<a href="blog-single-post.html" class="figure">
-						<img src="{{camp.img.url}}" alt="">
-					</a>
-					<div>
-						<h3>{{ camp.title }}</h3>
-						<p>
-							{{ camp.des }}
-						</p>
-						<a href="blog-single-post.html" class="more">read this</a>
-					</div>
-				</li>
-				{% endif %}
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-	<div id="footer">
-		<div>
-			<p>&copy; 2022 by Project Team 1. All rights reserved.</p>
-			<ul>
-				<li>
-					<a href="#" id="twitter">twitter</a>
-				</li>
-				<li>
-					<a href="#" id="facebook">facebook</a>
-				</li>
-				<li>
-					<a href="#" id="googleplus">googleplus</a>
-				</li>
-				<li>
-					<a href="#" id="pinterest">pinterest</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
-</html>
+	
