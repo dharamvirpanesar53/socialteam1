@@ -1,1 +1,1 @@
-web: gunicorn socialawareness.wzgi:application --log-file -
+web: gunicorn socialawareness.wzgi
