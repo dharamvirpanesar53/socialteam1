@@ -1,1 +1,1 @@
-web: gunicorn socialawareness.wzgi
+web:gunicorn socialawareness.wzgi
