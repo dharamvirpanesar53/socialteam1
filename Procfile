@@ -1,1 +1,3 @@
-web: gunicorn socialawareness.wzgi
+web: gunicorn socialawareness.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
