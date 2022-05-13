@@ -46,47 +46,37 @@
 			{% endif %}
 		</ul>
 	</div>
-	<div id="body">
-		<h1><span>Campaigns</span></h1>
-		<div>
-			<ul>
-				{% for camp in camps %}
-				{% if camp.approved %}
-				<li>
-					<a href="#" class="figure">
-						<img src="{{camp.img.url}}" alt="" width="295" height="295">
-					</a>
-					<div>
-						<h3>{{ camp.title }}</h3>
-						<p>
-							{{ camp.des }}
-						</p>
-						<a href="{% url 'detail' camp.id %}" class="more">read this</a>
-					</div>
-				</li>
-				{% endif %}
-				{% endfor %}
-			</ul>
+	
+			<center><img src="{{obj.img.url}}" alt="" ></center>
+
+			<div class="article">
+				<center><h1>{{ obj.title }}</h1></center>
+				<p>
+				<div style="width: 600px; margin:0 auto;"><h3> {{ obj.des }} </h3></div>
+				</p>
+				
+			</div>
 		</div>
 	</div>
 	<div id="footer">
 		<div>
-			<p>&copy; 2022 by Project Team 1. All rights reserved.</p>
+			<p>&copy; 2023 by Mustacchio. All rights reserved.</p>
 			<ul>
 				<li>
-					<a href="#" id="twitter">twitter</a>
+					<a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a>
 				</li>
 				<li>
-					<a href="#" id="facebook">facebook</a>
+					<a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a>
 				</li>
 				<li>
-					<a href="#" id="googleplus">googleplus</a>
+					<a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">googleplus</a>
 				</li>
 				<li>
-					<a href="#" id="pinterest">pinterest</a>
+					<a href="http://pinterest.com/fwtemplates/" id="pinterest">pinterest</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </body>
+
 </html>
