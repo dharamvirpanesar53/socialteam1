@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Awareness</title>
 </head>
-<body bgcolor="grey">
-
+<body >
+    {% if user.is_authenticated %}
     {% block content %}
     {% endblock  %}
-    
+    {% else %}
+        <p><a href="/">Please Log First</a></p>
+    {% endif %}
 </body>
 </html>

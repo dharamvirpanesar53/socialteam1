@@ -22,7 +22,7 @@
 				<a href="/">home</a>
 			</li>
 			<li>
-				<a href="about">about</a>
+				<a href="#">about</a>
 			</li>
 			{% if user.is_authenticated %}
 			<li><b>Hello, {{user.first_name}}</b></li>
@@ -47,26 +47,10 @@
 		</ul>
 	</div>
 	<div id="body">
-		<h1><span>Campaigns</span></h1>
+		<h1><span>Coming Soon</span></h1>
 		<div>
-			<ul>
-				{% for camp in camps %}
-				{% if camp.approved %}
-				<li>
-					<a href="#" class="figure">
-						<img src="{{camp.img.url}}" alt="" width="295" height="295">
-					</a>
-					<div>
-						<h3>{{ camp.title }}</h3>
-						<p>
-							{{ camp.des }}
-						</p>
-						<a href="{% url 'detail' camp.id %}" class="more">read this</a>
-					</div>
-				</li>
-				{% endif %}
-				{% endfor %}
-			</ul>
+			<img src="{% static 'images/about.jpg' %}" alt="">
+			
 		</div>
 	</div>
 	<div id="footer">

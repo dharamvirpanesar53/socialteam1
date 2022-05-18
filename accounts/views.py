@@ -65,3 +65,5 @@ def post_success(request):
     camp2.save()
     return redirect('/')
 
+
+

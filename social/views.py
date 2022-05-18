@@ -16,6 +16,9 @@ def detail(request, id):
     obj=get_object_or_404(campaign,pk=id)
 
     return render(request, 'readmore.html', {'obj': obj})
+
+def about(request):
+    return render(request, "about.html")
     
 
     
