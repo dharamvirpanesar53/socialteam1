@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 django_heroku.settings(locals())
+
+AWS_ACCESS_KEY_ID = 'AKIAWZEGJ2DQ3BFCAPG3'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'dharamvir'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
