@@ -144,8 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 django_heroku.settings(locals())
 
-AWS_ACCESS_KEY_ID = 
-AWS_SECRET_ACCESS_KEY = ''
+AWS_ACCESS_KEY_ID = 'AKIAWZEGJ2DQSM2JWNXH'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'dharamvir'
 
 AWS_S3_FILE_OVERWRITE = False
