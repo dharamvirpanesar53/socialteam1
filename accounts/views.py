@@ -65,5 +65,8 @@ def post_success(request):
     camp2.save()
     return redirect('/')
 
+def profile(request):
+    return render(request, "profile.html")
+
 
 
