@@ -1,5 +1,6 @@
 {% load static %}
 {% static "images" as baseURL %}
+
 <!doctype html>
 <!-- Homepage  -->
 <html>
@@ -27,10 +28,10 @@
 			{% if user.is_authenticated %}
 			<li><b>Hello, {{user.first_name}}</b></li>
 			<li>
-				<a href="#">Profile</a>
+				<a href="accounts/profile">Profile</a>
 			</li>
 			<li>
-				<a href="accounts/upload">Post Campaingns</a>
+				<a href="accounts/option">Post Campaingns</a>
 			</li>
 			
 			<li>
@@ -58,6 +59,8 @@
 			</div>
 		</div>
 	</div>
+	<center><h1>{{ obj.com }}</h1></center>
+	<center><h1><a href=" {{ obj.lin }} ">{{ obj.lin }}</a></h1></center>
 	<div id="footer">
 		<div>
 			<p>&copy; 2022 by Project Team 1. All rights reserved.</p>

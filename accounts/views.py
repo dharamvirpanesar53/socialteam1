@@ -60,7 +60,7 @@ def post_success(request):
     title= request.POST["title"]
     des= request.POST["des"]
     img= request.FILES["img"]
-    camp2 = campaign(title=title, des=des, img=img)
+    camp2 = campaign(title=title, des=des, img=img, )
 
     camp2.save()
     return redirect('/')
@@ -68,5 +68,21 @@ def post_success(request):
 def profile(request):
     return render(request, "profile.html")
 
+def option(request):
+    return render(request, "two.html")
+
+def business(request):
+    return render(request, "business.html")
+
+def post_success2(request):
+    title= request.POST["title"]
+    des= request.POST["des"]
+    com= request.POST["com"]
+    lin= request.POST["lin"]
+    img= request.FILES["img"]
+    camp3 = campaign(title=title, des=des, img=img, com=com, lin=lin)
+
+    camp3.save()
+    return redirect('/')
 
 
