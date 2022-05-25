@@ -59,7 +59,7 @@
 					<div>
 						<h3>{{ camp.title }}</h3>
 						<p>
-							{{ camp.des }}
+							{{ camp.des |truncatewords:10 }}
 						</p>
 						<a href="{% url 'detail' camp.id %}" class="more">read this</a>
 					</div>
